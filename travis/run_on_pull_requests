@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "Building PR..."
+echo "HOGE: ${HOGE}"
+echo "FUGA: ${FUGA}"
+echo "SECRET: ${SECRET}"
