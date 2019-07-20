@@ -8,6 +8,7 @@ env:
   global:
     - HOGE=hoge
     - FUGA=fuga
+    - NUM_PARENTS=$(git log --pretty=%P -n 1 HEAD | awk '{ print NF }')
 script:
   - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then bash ./travis/run_on_pull_requests; fi'
   - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./travis/run_on_non_pull_requests; fi'
